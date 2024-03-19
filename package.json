@@ -1,0 +1,26 @@
+{
+  "name": "eslint-plugin-angular-require-attribute",
+  "version": "1.0.0",
+  "description": "An eslint plugin for angular applications to configure tags and attribute to be required",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ValentinCOC/eslint-plugin-angular-require-attribute.git"
+  },
+  "keywords": [
+    "angular",
+    "eslint"
+  ],
+  "author": "ValentinCOC",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ValentinCOC/eslint-plugin-angular-require-attribute/issues"
+  },
+  "homepage": "https://github.com/ValentinCOC/eslint-plugin-angular-require-attribute#readme",
+  "dependencies": {
+    "eslint": "^8.57.0"
+  }
+}
