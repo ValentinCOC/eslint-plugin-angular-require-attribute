@@ -2,17 +2,28 @@
   "name": "eslint-plugin-angular-require-attribute",
   "version": "1.0.0",
   "description": "An eslint plugin for angular applications to configure tags and attribute to be required",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm run clean && tsc -p tsconfig.build.json",
+    "clean": "rm -r ./dist",
+    "test": "node test/angular-require-attribute.test.js",
+    "prepack": "npm run build && npx clean-package",
+    "postpack": "npx clean-package restore"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ValentinCOC/eslint-plugin-angular-require-attribute.git"
   },
   "keywords": [
+    "eslint",
+    "eslintrule",
+    "eslint-rule",
+    "eslintplugin",
+    "eslint-plugin",
     "angular",
-    "eslint"
+    "angular-template",
+    "html"
   ],
   "author": "ValentinCOC",
   "license": "MIT",
@@ -20,7 +31,20 @@
     "url": "https://github.com/ValentinCOC/eslint-plugin-angular-require-attribute/issues"
   },
   "homepage": "https://github.com/ValentinCOC/eslint-plugin-angular-require-attribute#readme",
-  "dependencies": {
-    "eslint": "^8.57.0"
+  "devDependencies": {
+    "@angular-eslint/builder": "^17.3.0",
+    "@angular-eslint/bundled-angular-compiler": "^17.3.0",
+    "@angular-eslint/eslint-plugin": "^17.3.0",
+    "@angular-eslint/eslint-plugin-template": "^17.3.0",
+    "@angular-eslint/schematics": "^17.3.0",
+    "@angular-eslint/template-parser": "^13.0.0 || ^14.0.0 || ^15.0.0 || ^16.0.0",
+    "@angular-eslint/utils": "^17.3.0",
+    "@angular/compiler": "^17.3.5",
+    "eslint": "^7.0.0 || ^8.0.0",
+    "typescript": "^5.4.2"
+  },
+  "peerDependencies": {
+    "@angular-eslint/template-parser": "^15.0.0 || ^16.0.0 || ^17.0.0",
+    "eslint": "^7.0.0 || ^8.0.0"
   }
 }
